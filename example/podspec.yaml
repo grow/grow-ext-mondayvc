@@ -10,7 +10,6 @@ preprocessors:
   autorun: true
   api_user:
   api_key:
-  collections_id: 
   jobs_path: /content/partials/jobs.yaml
   collections_path: /content/partials/collections.yaml
   organizations_path: /content/partials/organizations.yaml
