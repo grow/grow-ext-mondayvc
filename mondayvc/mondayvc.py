@@ -38,7 +38,7 @@ class MondayVCPreprocessor(grow.Preprocessor):
         headers = { 'X-User-Email': self.config.api_user, 'X-User-Token': self.config.api_key, 'Content-Type': 'application/json', 'Accept': 'application/json'}
         url = MondayVCPreprocessor.COLLECTIONS_URL
         resp = requests.get(url, headers=headers)
-    	if resp.status_code != 200:
+        if resp.status_code != 200:
                 raise Error('Error requesting -> {}'.format(url))
         collections = resp.json()
         MondayVCPreprocessor.COLLECTIONS_ID = collections['items'][0]['id']
@@ -50,7 +50,7 @@ class MondayVCPreprocessor(grow.Preprocessor):
         headers = { 'X-User-Email': self.config.api_user, 'X-User-Token': self.config.api_key, 'Content-Type': 'application/json', 'Accept': 'application/json'}
         url = MondayVCPreprocessor.ORGANIZATIONS_URL.format(collections_id=collections_id) + MondayVCPreprocessor.QUERY_PARAM.format(number_of_page=1)
         resp = requests.get(url, headers=headers)
-    	if resp.status_code != 200:
+        if resp.status_code != 200:
                 raise Error('Error requesting -> {}'.format(url))
         organizations = resp.json()
         path = os.path.join(organizations_path)
