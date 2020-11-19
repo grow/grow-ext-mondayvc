@@ -21,9 +21,9 @@ class AttributeMessage(messages.Message):
 
 class MondayVCPreprocessor(grow.Preprocessor):
     KIND = 'mondayvc'
-    JOBS_URL = 'https://api.monday.vc/v2/collections/{collections_id}/jobs'
-    COLLECTIONS_URL = 'https://api.monday.vc/v2/collections'
-    ORGANIZATIONS_URL = 'https://api.monday.vc/v2/collections/{collections_id}/organizations'
+    JOBS_URL = 'https://api.getro.com/v2/networks/{collections_id}/jobs'
+    COLLECTIONS_URL = 'https://api.getro.com/v2/networks'
+    ORGANIZATIONS_URL = 'https://api.getro.com/v2/networks/{collections_id}/organizations'
     QUERY_PARAM = '?page={number_of_page}&per_page=100'
     COLLECTIONS_ID = ''
 
