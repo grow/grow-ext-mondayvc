@@ -11,5 +11,5 @@ preprocessors:
   api_user:
   api_key:
   jobs_path: /content/partials/jobs.yaml
-  collections_path: /content/partials/collections.yaml
-  organizations_path: /content/partials/organizations.yaml
+  networks_path: /content/partials/networks.yaml
+  companies_path: /content/partials/companies.yaml
